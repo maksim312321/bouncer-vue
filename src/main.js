@@ -9,5 +9,5 @@ components.forEach(component => {
     //ф-я component позволяет зарегистрировать UI компонент (в данном случае 2 разных components)
 });
 
-console.log(components);
+// console.log(components);
 app.mount('#app');//занесение в дом дерево

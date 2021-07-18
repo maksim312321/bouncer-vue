@@ -1,5 +1,5 @@
 <template>
-<input type="text" :value = "modelValue" @change="updateValue" class="input" >
+<input type="text" :value = "modelValue" @input="updateValue" class="input" >
 </template>
 
 <script>
@@ -10,13 +10,13 @@ export default {
     },
     methods: {
         updateValue(event){
-            // this.$emit('update:modelValue', event.target.value)
+            this.$emit('update:modelValue', event.target.value)
         }
     }
 }
 </script>
 
-<style>
+<style> 
 .input{
     padding: 5px;
     border-radius: 20px;

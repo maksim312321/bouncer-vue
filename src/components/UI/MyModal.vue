@@ -17,7 +17,8 @@ export default {
     },
     methods: {
     hideModal(){
-      this.$emit('update:show', false)
+      this.$emit('update:show', false);
+      updateValue
     }
     }
 }
