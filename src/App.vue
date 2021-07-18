@@ -16,21 +16,40 @@
 
     </my-modal>
 
-    <div v-if="!modalVisible" class = "main__title">
+  <div v-if="!modalVisible" class="content__wrapper">
+
+      <div class = "main__title">
+
       <h1>Приветствую тебя, {{user_name}}</h1>
+
       <my-button class="nameRefresh" @click="nameRefresh">
         Это не я!
       </my-button>
-    </div>
-  </div>
+      </div>
+
+      <div class="todo">
+        <todo-list> </todo-list>
+      </div>
+    
+</div>
+</div>
 </template>
 
 <script>
+import TodoList from './components/todoList.vue';
 export default {
+  components: {
+    TodoList,
+  },
   data(){
-    return{
+    return{ 
       user_name: '',
       modalVisible: true,
+      arrOfDays: [
+        arrOfToDo:[
+          // TodoItem: String,
+        ]
+      ]
     }
   },
   methods:{
@@ -59,6 +78,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 div{
   font-family: Roboto;
+}
+.todo__list{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .main__title{
   display: flex;
